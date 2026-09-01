@@ -54,11 +54,19 @@ Aprendizados
 
 Durante o desenvolvimento deste projeto, pratiquei:
 
-Migração de um sistema de persistência em JSON para um banco de dados relacional (SQLite)
-Uso de consultas SQL (SELECT, INSERT, DELETE) com parâmetros seguros (prevenção de SQL Injection)
-Organização e legibilidade de código, com comentários e nomenclatura consistente
-Fluxo de versionamento com Git e GitHub
+- Migração de um sistema de persistência em JSON para um 
+banco de dados relacional (SQLite)
+
+- Uso de consultas SQL (SELECT, INSERT, DELETE) 
+com parâmetros seguros (prevenção de SQL Injection)
+
+- Organização e legibilidade de código, com comentários e nomenclatura consistente
+
+- Fluxo de versionamento com Git e GitHub
+
+
 Próximos passos
-Adicionar validação para nomes duplicados
-Criar interface gráfica (Web, com HTML/CSS)
-Melhorar tratamento de erros
+
+- Adicionar validação para nomes duplicados
+- Criar interface gráfica (Web, com HTML/CSS)
+- Melhorar tratamento de erros
