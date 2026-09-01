@@ -1,4 +1,4 @@
-Cadastro de Alunos
+Cadastro de Alunos👨‍🎓
 
 Sistema de linha de comando para gerenciar o cadastro de alunos, desenvolvido em
 Python com persistência de dados em banco de dados SQLite.
@@ -35,7 +35,7 @@ Como executar o projeto
 
 Clone este repositório:
 bash
-   git clone https://github.com/GuilhermePossetti/Cadastro_de_Alunos.git
+   git clone https://github.com/GuilhermePossetti/CADASTRO_DE_ALUNOS
 
 Entre na pasta do projeto:
 bash
