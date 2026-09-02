@@ -68,14 +68,15 @@ def listar_aluno():
 # função que entra no banco de dados e busca o nome que o usuário digitou
 def buscar_aluno():
     nome = input('Digite o nome do aluno que deseja buscar:')
-    cursor.execute('SELECT * FROM alunos WHERE alunos = ?', (nome,))
+    cursor.execute('SELECT * FROM alunos WHERE alunos LIKE ?', (f'%{nome}%',))
     resultado = cursor.fetchall()
 
     if len(resultado) == 0:
         print('Aluno não encontrado')
     else:
         print(f'Aluno {nome} encontrado')
-
+        for id_aluno, nome_aluno in resultado:
+            print(id_aluno, nome_aluno)
 
 
 # função que o usuario escolhe o id do banco de dados e exclui
@@ -88,10 +89,14 @@ def excluir_aluno():
         return
     for id_aluno, nome_aluno, in resultado:
         print(f'{id_aluno} - {nome_aluno}')
-    escolha = int(input('Digite o ID do aluno que deseja excluir: '))
+    try:
+        escolha = int(input('Digite o ID do aluno que deseja excluir: '))
 
+        cursor.execute('SELECT * FROM alunos WHERE id = ?', (escolha,))
+    except:
+        print('Digite apenas numero válidos')
+        return
 
-    cursor.execute('SELECT * FROM alunos WHERE id = ?', (escolha,))
     verificacao = cursor.fetchall()
 
     if len(verificacao) == 0:
