@@ -67,8 +67,17 @@ def listar_aluno():
 
 # função que entra no banco de dados e busca o nome que o usuário digitou
 def buscar_aluno():
+
     nome = input('Digite o nome do aluno que deseja buscar:')
+
+    while True:
+        if nome == '' or not nome.replace(' ', '').isalpha(): 
+            nome = input('Digite o nome do aluno que deseja buscar:')        
+        else:
+            break
+
     cursor.execute('SELECT * FROM alunos WHERE alunos LIKE ?', (f'%{nome}%',))
+
     resultado = cursor.fetchall()
 
     if len(resultado) == 0:
